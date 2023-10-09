@@ -9,6 +9,7 @@ main{
     justify-content: center;
     flex-direction: column;
     background-color: aqua;
+   
 }
 h1{
     text-transform: capitalize;
@@ -36,4 +37,10 @@ button{
     margin: 25px;
     font-weight: bold;
     text-transform: capitalize;
+}
+div>button:hover{
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    box-shadow: #353333e3;
 }
