@@ -1,35 +1,53 @@
+//on a un element qui varie dans l'application ,c'ect le count
+// donc on a cree un variable qui contient cette valeur 
+// au demarage elle vaut 0
 let currentValue = 0;
+//on declare nos function
+// mais elle ne seront excutees que si on l'apple
 
+function changeColor() {
+  if (currentValue<0) {
+    document.getElementById("count").style.color= "red";
+    
+  } else if (currentValue>0) {
+    document.getElementById("count").style.color= "green";
+  } else if (currentValue==0) {
+    document.getElementById("count").style.color="black";
+  }
+}
+
+//function Increase
 function setIncrease() {
-    currentValue = currentValue +1;
+    currentValue ++;
+    changeColor();
     document.getElementById("count").innerHTML = currentValue;
   }
-  document.getElementById("ajout").addEventListener("click", setIncrease);
-  
-
+ 
+//function Decrease
   function setDecrease() {
-    currentValue = currentValue -1;
-    document.getElementById("count").innerHTML = currentValue;
+    currentValue --;
+   changeColor();
+   document.getElementById("count").innerHTML = currentValue;  
   }
-  document.getElementById("soustraction").addEventListener("click", setDecrease)
+
   
+  // function Reset
   function setReset() {
     currentValue = 0;
+    changeColor();
     document.getElementById("count").innerHTML = currentValue;
   }
-  document.getElementById("réinitialiser").addEventListener("click", setReset)
-
-  function displayValue() {
-    if (value < 0) {
-    document.getElementById(“value”).style.color = "red";
-    } else if (value > 0) {
-    document.getElementById(“value”)..style.color = "green";
-    } else {
-    document.getElementById(“value”).style.color = "black";
-    }
-    document.getElementById(“value”).textContent = value;
-    }
   
+  document.getElementById("soustraction").addEventListener("click", setDecrease);
+  document.getElementById("ajout").addEventListener("click", setIncrease);
+  document.getElementById("reinitialiser").addEventListener("click", setReset);
+
+
+
+ 
+
+
+
  
   
 
